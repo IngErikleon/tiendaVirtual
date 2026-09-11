@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda</title>
+  </head>
+  <body>
+    <header>
+    <section id="header" class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <ul class="flat-support">
+            <li><a href="#">Soporte</a></li>
+            <li><a href="#">Localiza</a></li>
+            <li><a href="#">Orden</a></li>
+          </ul>
+        </div>
+
+        <!-- Centro -->
+        <div class="col-md-4">
+          <ul class="flat-infomation">
+            <li class="phone">
+              Llamanos: <a href="tel:+919012983208">(+961) 123456789</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Derecha -->
+        <div class="col-md-4">
+          <ul class="flat-unstyled">
+            <li class="account">
+              <a href="#"><i class="fas fa-user" ></i> <i class="fa fa-angle-down"></i></a>
+              <ul class="unstyled">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Wishlist</a></li>
+                <li><a href="#">My Cart</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Checkout</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">USD <i class="fa fa-angle-down"></i></a>
+              <ul class="unstyled">
+                <li><a href="#">Euro</a></li>
+                <li><a href="#">Dolar</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">English <i class="fa fa-angle-down"></i></a>
+              <ul class="unstyled">
+                <li><a href="#">Turkish</a></li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">اللغة العربية</a></li>
+                <li><a href="#">Español</a></li>
+                <li><a href="#">Italiano</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="logo">
+  <!-- ====== ICONO CSS ====== -->
+  <div class="icon-ferreteria">
+    <div class="tuerca">
+      <span class="perno perno-1"></span>
+      <span class="perno perno-2"></span>
+      <span class="perno perno-3"></span>
+      <span class="perno perno-4"></span>
+      <span class="perno perno-5"></span>
+      <span class="perno perno-6"></span>
+      <span class="perno perno-7"></span>
+      <span class="perno perno-8"></span>
+    </div>
+    <div style="position:absolute; top:-6px; right:-6px; width:16px; height:16px; background:radial-gradient(circle, #f5d99a, #dbb86a); border-radius:50%; filter:blur(4px); opacity:0.5; transition: all 0.3s;"></div>
+    <div style="position:absolute; bottom:-6px; left:-6px; width:12px; height:12px; background:radial-gradient(circle, #dbb86a, #8a743c); border-radius:50%; filter:blur(5px); opacity:0.4;"></div>
+  </div>
+
+  <!-- ====== TEXTO ====== -->
+  <div class="logo-text">
+    <span class="logo-brand">Ferretería</span>
+    <span class="logo-brand-sub">Chiapas</span>
+    <span class="logo-slogan">🔩 construcción y hogar</span>
+  </div>
+</div>
+      <nav>
+        <ul>
+          <li>
+            <a href="#" onclick="toggleSubMenu(this)">Producto</a>
+            <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+              <svg viewBox="0 0 256 512" title="angle-left">
+                <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+              </svg>
+            </button>
+            <ul class="submenu">
+              <li><a href="#">Herramientas</a></li>
+              <li><a href="#">Cables</a></li>
+              <li><a href="#">Tubos</a></li>
+              <li><a href="#">Madera</a></li>
+              <li><a href="#">Electrico</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" onclick="toggleSubMenu(this)">Servicios</a>
+            <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+              <svg viewBox="0 0 256 512" title="angle-left">
+                <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+              </svg>
+            </button>
+            <ul class="submenu">
+              <li><a href="#">Logistico</a></li>
+              <li><a href="#">Pruebas</a></li>
+              <li><a href="#">Estrategicos</a></li>
+              <li><a href="#">Acompañamientos</a></li>
+              <li><a href="#">Fletes</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" onclick="toggleSubMenu(this)">Ayuda</a>
+            <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+              <svg viewBox="0 0 256 512" title="angle-left">
+                <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+              </svg>
+            </button>
+            <ul class="submenu">
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Emergencia</a></li>
+              <li><a href="#">Quienes Somos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header></hr>
+
+    <main>
+
+      <section aria-labelledby="titulo-productos">
+     <h1 id="titulo-productos"> Productos </h1>
+        <p>Imagenes rotativas</p>
+      <div class="productos-grid">
+        <!-- PRODUCTO 1: Cautín -->
+<article class="producto">
+  <button class="like-btn" type="button" aria-label="Agregar a favoritos">
+    <i class="far fa-heart" aria-hidden="true"></i>
+  </button>
+  
+  <div class="producto-superior">
+    <figure>
+      <div class="galeria-producto">
+        <img src="https://www.electronicauniversal.com.mx/wp-content/uploads/2020/03/WE1010NA.jpg" alt="Cautín Weller, vista frontal">
+        <img src="https://kinetronica.com/3604-home_default/cautin-de-estacion-wes51-50w-weller.jpg" alt="Cautín Weller, vista lateral">
+        <img src="img/cautin-superior.jpg" alt="Cautín Weller, vista superior">
+      </div>
+    </figure>
+    
+    <div class="producto-info">
+      <h3>Cautín 1200 watts</h3>
+      <p>Marca Weller</p>
+      
+      <div class="info-inferior">
+        <div class="badge-moq">STOCK: 8 piezas</div>
+        <div class="price"> 
+          <span class="new-price">$2800</span>
+          <span class="original-price">
+            <span class="sr-only">Originally: </span>$3500.00
+          </span>
+        </div>
+      </div>
+
+      <div class="rating">
+        <span class="sr-only">Rating: 3 out of 5 stars</span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <a href="#" class="reviews-link">77 reviews</a>
+      </div>
+    <!-- BADGE ANIMADO -->
+<div class="badge">
+  <div class="badge-inner">
+
+    <div class="badge-front">
+      DESCUENTO DEL 30%
+    </div>
+
+    <div class="badge-back">
+      MÁS DE 25 PIEZAS VENDIDAS EL MES PASADO
+    </div>
+
+  </div>
+</div>
+    </div>
+  </div>
+
+  <div class="descripcion-box">
+    <span class="etiqueta">DESCRIPCIÓN:</span>
+    <span class="info-producto">Cautín de 1200 watts marca Weller ideal para reparar celulares o realizar reballing</span>
+  </div>
+</article>
+
+<!-- PRODUCTO 2: Placa Baquelita -->
+<article class="producto">
+  <button class="like-btn" type="button" aria-label="Agregar a favoritos">
+    <i class="far fa-heart" aria-hidden="true"></i>
+  </button>
+  
+  <div class="producto-superior">
+    <figure>
+      <div class="galeria-producto">
+        <img src="https://mvelectronica.s3.us-east-2.amazonaws.com/productos/PF10X10B/613b989ae51a5.webp" alt="Placa de baquelita, vista frontal">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXhd1w9x2YYTBSm89pHrQd1HcKYBrmG5njYtqLbFBHHX075BJ8GMFGKFI&s=10" alt="Placa de baquelita, vista lateral">
+        <img src="img/placa-superior.jpg" alt="Placa de baquelita, vista superior">
+      </div>
+    </figure>
+    
+    <div class="producto-info">
+      <h3>Placa de baquelita</h3>
+      <p>10 cm × 10 cm</p>
+      <p>Marca Steren</p>
+      
+      <div class="info-inferior">
+        <div class="badge-moq">STOCK: 3 piezas</div>
+        <div class="price"> 
+          <span class="new-price">$68</span>
+          <span class="original-price">
+            <span class="sr-only">Originally: </span>$89.00
+          </span>
+        </div>
+      </div>
+      
+      <div class="rating">
+        <span class="sr-only">Rating: 3 out of 5 stars</span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <a href="#" class="reviews-link">77 reviews</a>
+      </div>
+      <!-- BADGE ANIMADO -->
+<div class="badge">
+  <div class="badge-inner">
+
+    <div class="badge-front">
+      DESCUENTO DEL 15%
+    </div>
+
+    <div class="badge-back">
+      MÁS DE 10 PIEZAS VENDIDAS EL MES PASADO
+    </div>
+
+  </div>
+</div>
+    </div>
+  </div>
+
+  <div class="descripcion-box">
+    <span class="etiqueta">DESCRIPCIÓN:</span>
+    <span class="info-producto">Placa de baquelita de 10 cm x 10 cm; ideal para estudiantes de electrónica, fácil disolución</span>
+  </div>
+</article>
+
+<!-- PRODUCTO 3: Resistencia -->
+<article class="producto">
+  <button class="like-btn" type="button" aria-label="Agregar a favoritos">
+    <i class="far fa-heart" aria-hidden="true"></i>
+  </button>
+  
+  <div class="producto-superior">
+    <figure>
+      <div class="galeria-producto">
+        <img src="https://intesc.mx/wp-content/uploads/2021/09/resistencia-de-10k-ohm-a-0-25w-RES103CTHT.jpg.webp" alt="Resistencia de 10 kiloohms, vista frontal">
+        <img src="https://mvelectronica.s3.us-east-2.amazonaws.com/productos/CW10K/66e09f63750c5.webp" alt="Resistencia de 10 kiloohms, vista lateral">
+        <img src="https://mvelectronica.s3.us-east-2.amazonaws.com/productos/MW10K/66e9e8d6943a0.webp" alt="Resistencia de 10 kiloohms, vista superior">
+      </div>
+    </figure>
+    
+    <div class="producto-info">
+      <h3>Resistencia 10 KΩ 1/4 watts</h3>
+      <p>Marca Steren</p>
+      
+      <div class="info-inferior">
+        <div class="badge-moq">STOCK: 150 piezas</div>
+        <div class="price"> 
+          <span class="new-price">$2</span>
+          <span class="original-price">
+            <span class="sr-only">Originally: </span>$9.99
+          </span>
+        </div>
+      </div>
+      
+      <div class="rating">
+        <span class="sr-only">Rating: 3 out of 5 stars</span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <a href="#" class="reviews-link">65 reviews</a>
+      </div>
+      <!-- BADGE ANIMADO -->
+<div class="badge">
+  <div class="badge-inner">
+
+    <div class="badge-front">
+      DESCUENTO DEL 15%
+    </div>
+
+    <div class="badge-back">
+      MÁS DE 30 PIEZAS VENDIDAS EL MES PASADO
+    </div>
+
+  </div>
+</div>
+    </div>
+  </div>
+
+  <div class="descripcion-box">
+    <span class="etiqueta">DESCRIPCIÓN:</span>
+    <span class="info-producto">Resistencia de 10 K Ohms, soporta hasta 1/4 de Watts, fácil instalación en el protoboard</span>
+  </div>
+</article>
+
+<!-- PRODUCTO 4: Transformador -->
+<article class="producto">
+  <button class="like-btn" type="button" aria-label="Agregar a favoritos">
+    <i class="far fa-heart" aria-hidden="true"></i>
+  </button>
+  
+  <div class="producto-superior">
+    <figure>
+      <div class="galeria-producto">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMGjWo81shBB4BE8DiUnpCu7cJYd_FJyFlehaIoedhQzmAxR_84Gsl6dY&s=10" alt="Transformador, vista frontal">
+        <img src="https://http2.mlstatic.com/D_799202-MLM45317447170_032021-C.jpg" alt="Transformador, vista lateral">
+        <img src="https://image.made-in-china.com/202f0j00fyhMIigDbHov/Ei-Transformator-220V-to-5V-11V-12V-13V-18V-24V-AC-Step-Down-Transformer.webp" alt="Transformador, vista superior">
+      </div>
+    </figure>
+    
+    <div class="producto-info">
+      <h3>Transformador 120 V salida 5 V</h3>
+      <p>Marca Steren</p>
+      
+      <div class="info-inferior">
+        <div class="badge-moq">STOCK: 6 piezas</div>
+        <div class="price"> 
+          <span class="new-price">$320</span>
+          <span class="original-price">
+            <span class="sr-only">Originally: </span>$359.99
+          </span>
+        </div>
+      </div>
+      
+      <div class="rating">
+        <span class="sr-only">Rating: 3 out of 5 stars</span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <a href="#" class="reviews-link">65 reviews</a>
+      </div>
+      <!-- BADGE ANIMADO -->
+<div class="badge">
+  <div class="badge-inner">
+
+    <div class="badge-front">
+      DESCUENTO DEL 5%
+    </div>
+
+    <div class="badge-back">
+      MÁS DE 7 PIEZAS VENDIDAS EL MES PASADO
+    </div>
+
+  </div>
+</div>
+    </div>
+  </div>
+
+  <div class="descripcion-box">
+    <span class="etiqueta">DESCRIPCIÓN:</span>
+    <span class="info-producto">Transformador de 120 Volts con salida 5V de Corriente Alterna ideal para proyectos de electrónica</span>
+  </div>
+</article>
+
+<!-- PRODUCTO 5: Lámpara -->
+<article class="producto">
+  <button class="like-btn" type="button" aria-label="Agregar a favoritos">
+    <i class="far fa-heart" aria-hidden="true"></i>
+  </button>
+  
+  <div class="producto-superior">
+    <figure>
+      <div class="galeria-producto">
+        <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/71POxVvifVL._AC_SX342_SY445_QL70_ML2_.jpg" alt="Lampara con lupa, vista frontal">
+        <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/814Dw3C3sJL._AC_SX679_.jpg" alt="Lampara con lupa, vista lateral">
+        <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/81+WETfy1ML._AC_SX679_.jpg" alt="Lampara con lupa, vista superior">
+      </div>
+    </figure>
+    
+    <div class="producto-info">
+      <h3>Lampara con Lupa para Soldar</h3>
+      <p>Marca Steren</p>
+      
+      <div class="info-inferior">
+        <div class="badge-moq">STOCK: 7 piezas</div>
+        <div class="price"> 
+          <span class="new-price">$1800</span>
+          <span class="original-price">
+            <span class="sr-only">Originally: </span>$2499.99
+          </span>
+        </div>
+      </div>
+      
+      <div class="rating">
+        <span class="sr-only">Rating: 3 out of 5 stars</span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <a href="#" class="reviews-link">19 reviews</a>
+      </div>
+      <!-- BADGE ANIMADO -->
+<div class="badge">
+  <div class="badge-inner">
+
+    <div class="badge-front">
+      DESCUENTO DEL 10%
+    </div>
+
+    <div class="badge-back">
+      MÁS DE 7 PIEZAS VENDIDAS EL MES PASADO
+    </div>
+
+  </div>
+</div>
+    </div>
+  </div>
+
+  <div class="descripcion-box">
+    <span class="etiqueta">DESCRIPCIÓN:</span>
+    <span class="info-producto">Lampara con lupa ideal para realizar reballing</span>
+  </div>
+</article>
+
+<!-- PRODUCTO 6: Estaño -->
+<article class="producto">
+  <button class="like-btn" type="button" aria-label="Agregar a favoritos">
+    <i class="far fa-heart" aria-hidden="true"></i>
+  </button>
+  
+  <div class="producto-superior">
+    <figure>
+      <div class="galeria-producto">
+        <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/617E65q2LsL._AC_SY300_SX300_QL70_ML2_.jpg" alt="Estaño, vista frontal">
+        <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/71G-y9xttXL._AC_SX679_.jpg" alt="Estaño, vista lateral">
+        <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/41Mw1Bvqs5L._AC_SX679_.jpg" alt="Estaño, vista superior">
+      </div>
+    </figure>
+    
+    <div class="producto-info">
+      <h3>Estaño 50 cm</h3>
+      <p>Marca Steren</p>
+      
+      <div class="info-inferior">
+        <div class="badge-moq">STOCK: 10 piezas</div>
+        <div class="price"> 
+          <span class="new-price">$300</span>
+          <span class="original-price">
+            <span class="sr-only">Originally: </span>$359.99
+          </span>
+        </div>
+      </div>
+      
+      <div class="rating">
+        <span class="sr-only">Rating: 3 out of 5 stars</span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <a href="#" class="reviews-link">10 reviews</a>
+      </div>
+      <!-- BADGE ANIMADO -->
+<div class="badge">
+  <div class="badge-inner">
+
+    <div class="badge-front">
+      DESCUENTO DEL 5%
+    </div>
+
+    <div class="badge-back">
+      MÁS DE 6 PIEZAS VENDIDAS EL MES PASADO
+    </div>
+
+  </div>
+</div>
+    </div>
+  </div>
+
+  <div class="descripcion-box">
+    <span class="etiqueta">DESCRIPCIÓN:</span>
+    <span class="info-producto">Estaño de 50 cm, marca Steren</span>
+  </div>
+</article>
+
+<!-- PRODUCTO 7: Multímetro -->
+<article class="producto">
+  <button class="like-btn" type="button" aria-label="Agregar a favoritos">
+    <i class="far fa-heart" aria-hidden="true"></i>
+  </button>
+  
+  <div class="producto-superior">
+    <figure>
+      <div class="galeria-producto">
+        <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/41BaeEKVfgL._SX342_SY445_QL70_ML2_.jpg" alt="Multimetro, vista frontal">
+        <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/71iYgovuDDL._SX522_.jpg" alt="Multimetro, vista lateral">
+        <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/61Ls3sfTQNL._SX522_.jpg" alt="Multimetro, vista superior">
+      </div>
+    </figure>
+    
+    <div class="producto-info">
+      <h3>Multimetro Profesional</h3>
+      <p>Marca Steren</p>
+      
+      <div class="info-inferior">
+        <div class="badge-moq">STOCK: 12 piezas</div>
+        <div class="price"> 
+          <span class="new-price">$2500</span>
+          <span class="original-price">
+            <span class="sr-only">Originally: </span>$3299.99
+          </span>
+        </div>
+      </div>
+      
+      <div class="rating">
+        <span class="sr-only">Rating: 3 out of 5 stars</span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <a href="#" class="reviews-link">10 reviews</a>
+      </div>
+      <!-- BADGE ANIMADO -->
+<div class="badge">
+  <div class="badge-inner">
+
+    <div class="badge-front">
+      DESCUENTO DEL 15%
+    </div>
+
+    <div class="badge-back">
+      MÁS DE 25 PIEZAS VENDIDAS EL MES PASADO
+    </div>
+
+  </div>
+</div>
+    </div>
+  </div>
+
+  <div class="descripcion-box">
+    <span class="etiqueta">DESCRIPCIÓN:</span>
+    <span class="info-producto">Multimetro profesional, para medir continuidad corriente directa y corriente alterna dura hasta 8 horas continuas</span>
+  </div>
+</article>
+
+<!-- PRODUCTO 8: Ácido -->
+<article class="producto">
+  <button class="like-btn" type="button" aria-label="Agregar a favoritos">
+    <i class="far fa-heart" aria-hidden="true"></i>
+  </button>
+  
+  <div class="producto-superior">
+    <figure>
+      <div class="galeria-producto">
+        <img src="https://www.steren.com.mx/media/catalog/product/cache/bb0cad18a6adb5d17b0efd58f4201a2f/image/17665c4d9/cloruro-ferrico-de-220-ml.jpg" alt="Acido, vista frontal">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ3lRoQRwXBaZ6kxcz7TZCfUPr-VTFdnwGmpZ-K1OBkQ&s=10" alt="Acido, vista lateral">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_805602-MLA111524516174_062026-O.webp" alt="Acido, vista superior">
+      </div>
+    </figure>
+    
+    <div class="producto-info">
+      <h3>Acido para Placas</h3>
+      <p>Marca Steren</p>
+      
+      <div class="info-inferior">
+        <div class="badge-moq">STOCK: 3 piezas</div>
+        <div class="price"> 
+          <span class="new-price">$80</span>
+          <span class="original-price">
+            <span class="sr-only">Originally: </span>$99.99
+          </span>
+        </div>
+      </div>
+      
+      <div class="rating">
+        <span class="sr-only">Rating: 3 out of 5 stars</span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <a href="#" class="reviews-link">25 reviews</a>
+      </div>
+      <!-- BADGE ANIMADO -->
+<div class="badge">
+  <div class="badge-inner">
+
+    <div class="badge-front">
+      DESCUENTO DEL 25%
+    </div>
+
+    <div class="badge-back">
+      MÁS DE 3 PIEZAS VENDIDAS EL MES PASADO
+    </div>
+
+  </div>
+</div>
+    </div>
+  </div>
+
+  <div class="descripcion-box">
+    <span class="etiqueta">DESCRIPCIÓN:</span>
+    <span class="info-producto">Ácido para placas, ideal para limpieza de metales</span>
+  </div>
+</article>
+
+<!-- PRODUCTO 9: Pinza -->
+<article class="producto">
+  <button class="like-btn" type="button" aria-label="Agregar a favoritos">
+    <i class="far fa-heart" aria-hidden="true"></i>
+  </button>
+  
+  <div class="producto-superior">
+    <figure>
+      <div class="galeria-producto">
+        <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/41QishyeQ-L._AC_SX679_.jpg" alt="Pinza punta de aguja, vista frontal">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXtcx9NzIabzTbMTAOuPR71cMd8kNsepKY3_nncPUsPTaouMzoM6S19CXF&s=10" alt="Pinza punta de aguja, vista lateral">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_635063-MLA114130201028_082026-O.webp" alt="Pinza punta de aguja, vista superior">
+      </div>
+    </figure>
+    
+    <div class="producto-info">
+      <h3>Pinza Punta de Aguja</h3>
+      <p>Marca Steren</p>
+      
+      <div class="info-inferior">
+        <div class="badge-moq">STOCK: 19 piezas</div>
+        <div class="price"> 
+          <span class="new-price">$350</span>
+          <span class="original-price">
+            <span class="sr-only">Originally: </span>$399.99
+          </span>
+        </div>
+      </div>
+      
+      <div class="rating">
+        <span class="sr-only">Rating: 3 out of 5 stars</span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="fas fa-star star-filled" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <span class="far fa-star star-empty" aria-hidden="true"></span>
+        <a href="#" class="reviews-link">20 reviews</a>
+      </div>
+      <!-- BADGE ANIMADO -->
+<div class="badge">
+  <div class="badge-inner">
+
+    <div class="badge-front">
+      DESCUENTO DEL 15%
+    </div>
+
+    <div class="badge-back">
+      MÁS DE 50 PIEZAS VENDIDAS EL MES PASADO
+    </div>
+
+  </div>
+</div>
+    </div>
+  </div>
+
+  <div class="descripcion-box">
+    <span class="etiqueta">DESCRIPCIÓN:</span>
+    <span class="info-producto">Pinza punta de aguja, ideal para trabajos de precisión en electrónica</span>
+  </div>
+</article>
+  
+   
+      </div>
+    </section>
+
+  </main>
+
+
+
+
+  <footer>
+
+    <p>
+      &copy; 2026 Mi Tienda. Tuxtla Gutiérrez,Chiapas;Todos los derechos reservados.
+    </p>
+
+  </footer>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
