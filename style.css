@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Comic+Relief:wght@400;700&display=swap');
+
+
+:root {
+  --primary-color: #ECE9D8;
+  --hover-color: #C0C0C0;
+  --accent-color: #0071FF;
+  --text-color: #11121a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Comic Relief", system-ui;
+  height: 100%;
+  color: var(--text-color);
+}
+
+body {
+  padding-top: 60px;
+}
+
+/* ============================================
+   HEADER TOP 
+   ============================================ */
+
+.header-top {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+  height: 30px;
+  font-size: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-top .container {
+  width: 1170px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header-top .row {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
+.header-top .col-md-4 {
+  width: 33.333%;
+  padding: 0 15px;
+}
+
+/* ===== Izquierda: flat-support ===== */
+ul.flat-support {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.flat-support li {
+  display: inline-block;
+  line-height: 30px;
+  height: 37px;
+}
+
+ul.flat-support li a {
+  display: inline-block;
+  padding: 0 10px 0 7px;
+  border-right: 1px solid #e5e5e5;
+  font-size: 10px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+ul.flat-support li:first-child a {
+  padding-left: 0;
+}
+
+ul.flat-support li:last-child a {
+  border-right: none;
+  padding-right: 0;
+}
+
+ul.flat-support li a:hover {
+  color: #f28b00;
+}
+
+/* ===== Centro: flat-infomation ===== */
+ul.flat-infomation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul.flat-infomation li.phone {
+  line-height: 30px;
+  height: 37px;
+  color: #f28b00;
+  letter-spacing: -0.5px;
+}
+
+ul.flat-infomation li.phone a {
+  color: #f28b00;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ul.flat-infomation li.phone a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Derecha: flat-unstyled + dropdowns ===== */
+ul.flat-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+ul.flat-unstyled > li {
+  display: inline-block;
+  line-height: 30px;
+  height: 37px;
+  position: relative;
+}
+
+ul.flat-unstyled > li > a {
+  display: inline-block;
+  padding: 0 9px 0 6px;
+  border-left: 1px solid #e5e5e5;
+  font-size: 10px;
+  color: #333;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+ul.flat-unstyled > li:first-child > a {
+  border-left: none;
+}
+
+ul.flat-unstyled > li > a i {
+  margin-left: 6px;
+  font-size: 11px;
+}
+
+ul.flat-unstyled > li > a:hover {
+  color: #f28b00;
+}
+
+/* Dropdown */
+ul.flat-unstyled > li > ul.unstyled {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 130px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 99;
+  text-align: left;
+}
+
+ul.flat-unstyled > li:hover > ul.unstyled {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+ul.flat-unstyled > li > ul.unstyled li a {
+  display: block;
+  padding: 6px 16px;
+  font-size: 10px;
+  color: #484848;
+  text-decoration: none;
+}
+
+ul.flat-unstyled > li > ul.unstyled li a:hover {
+  color: #f28b00;
+  background-color: #f9f9f9;
+}
+
+/* ====== CONTENEDOR DEL LOGO ====== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  user-select: none;
+}
+
+/* ====== ICONO: TUERCA CON PERNOS ====== */
+.icon-ferreteria {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  background: radial-gradient(circle at 30% 30%, #e8b85a, #b87c2a);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  box-shadow: 0 5px 0 #6b4a1a, 
+              0 8px 18px rgba(60, 40, 10, 0.6),
+              inset 0 -3px 6px rgba(0,0,0,0.5),
+              inset 0 3px 6px rgba(255,215,140,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: rotate(2deg);
+  flex-shrink: 0;
+}
+
+.logo:hover .icon-ferreteria {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.tuerca {
+  width: 34px;
+  height: 34px;
+  background: #3d3522;
+  border-radius: 50%;
+  box-shadow: inset 0 -2px 0 #1f1a10, 
+              inset 0 2px 5px #6b5d3f,
+              0 0 0 3px #8a743c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.tuerca::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #2a2416;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.6);
+  transition: all 0.2s;
+}
+
+.tuerca::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #b89a5a;
+  border-radius: 50%;
+  box-shadow: 
+    11px 0 0 #b89a5a,
+    -11px 0 0 #b89a5a,
+    0 11px 0 #b89a5a,
+    0 -11px 0 #b89a5a;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.perno {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #b89a5a;
+  border-radius: 50%;
+  box-shadow: inset 0 -1px 0 #5a451a;
+  transition: all 0.2s;
+}
+
+.perno-1 { top: -3px; left: 9px; }
+.perno-2 { top: -3px; left: 25px; }
+.perno-3 { bottom: -3px; left: 9px; }
+.perno-4 { bottom: -3px; left: 25px; }
+.perno-5 { left: -3px; top: 9px; }
+.perno-6 { left: -3px; top: 25px; }
+.perno-7 { right: -3px; top: 9px; }
+.perno-8 { right: -3px; top: 25px; }
+
+.logo:hover .perno {
+  background: #dbb86a;
+  box-shadow: inset 0 -1px 0 #5a451a, 0 0 8px #e8b85a;
+}
+
+.logo:hover .tuerca {
+  background: #4a402a;
+}
+
+.logo:hover .tuerca::after {
+  background: #dbb86a;
+  box-shadow: 
+    11px 0 0 #dbb86a,
+    -11px 0 0 #dbb86a,
+    0 11px 0 #dbb86a,
+    0 -11px 0 #dbb86a;
+}
+
+/* TEXTO DEL LOGO  */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-align: left;
+}
+
+.logo-brand {
+  font-size: 1.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f5e6c8 0%, #dbb86a 50%, #b88a3a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.5px;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
+  transition: all 0.2s;
+}
+
+.logo-brand-sub {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f5e6c8 0%, #dbb86a 50%, #b88a3a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.5px;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
+  margin-top: -3px;
+  transition: all 0.2s;
+}
+
+.logo-slogan {
+  font-size: 0.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 2px;
+  background: linear-gradient(145deg, #dbb86a, #8a743c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.85;
+  transition: all 0.2s;
+}
+
+.logo:hover .logo-brand,
+.logo:hover .logo-brand-sub {
+  background: linear-gradient(135deg, #ffffff 0%, #e8c87a 60%, #c99a3a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.logo:hover .logo-slogan {
+  letter-spacing: 2.5px;
+  opacity: 1;
+}
+
+
+nav {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-bottom: 1px solid var(--hover-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+
+  nav > ul > li {
+  position: relative;
+  display: flex;     
+  align-items: center;  /* los centra verticalmente entre sí */
+}
+ 
+#titulo-productos{
+  text-align:center;
+  font-size:2rem;
+  font-family: "Comic Relief", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--primary-color);
+  min-width: 180px;
+  z-index: 100;
+}
+
+li.activo > .submenu {
+  display: flex;
+}
+
+nav a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a:hover {
+  background-color: var(--hover-color);
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0 0 1rem;
+}
+
+.dropdown-btn svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  transition: transform 0.2s ease;
+}
+
+li.activo .dropdown-btn svg {
+  transform: rotate(-90deg);
+}
+.productos-grid{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 22px 50px 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+  position: relative;
+}
+.producto {
+ display: flex;
+  flex-direction: column; 
+  padding: 20px;
+  border: 1px solid #737373;
+  border-radius: 10px;
+  position: relative;
+  min-width: 0;
+  gap: 15px; 
+}
+  .producto-superior {
+  display: flex;
+  flex-direction: row; /* 👈 Aquí SÍ van lado a lado */
+  align-items: stretch;
+  gap: 15px;
+  width: 100%;
+  min-width: 0;
+}
+.like-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  background: none;
+  border: none;
+
+  font-size: 24px;
+  color: #777;
+
+  cursor: pointer;
+}
+
+.like-btn.activo {
+  color: #e63946;
+}
+
+.like-btn:hover {
+  color: red;
+}
+.like-btn.activo:hover {
+  color: #b71c1c;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.producto-info h2,
+.producto-info p {
+  overflow-wrap: break-word;
+}
+
+.producto .info-inferior {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center; 
+  gap: 10px; 
+  margin-top: 10px;
+}
+
+
+.producto .badge-moq {
+  display: inline-block;
+  background-color: #f0f2f2;
+  color: #565959;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid #e3e6e6;
+  font-weight: 500;
+   max-width: 100%;    
+  white-space: nowrap;   
+  overflow: hidden;   
+  text-overflow: ellipsis; 
+}
+
+
+.producto .price {
+  display: flex;
+  align-items: baseline; 
+  gap: 8px;              
+  padding-left: 0; 
+}
+.producto .price{
+ display: flex;
+  align-items: baseline; 
+  gap: 8px;              
+  padding-left: 10px;
+
+}
+.producto .price .new-price{
+  font-weight: bold;
+}
+.producto .price .original-price{
+  margin-left: 5px;
+  font-size: 14px;
+  font-style: italic;
+  opacity: .5;
+  text-decoration: line-through;
+}
+.producto .rating {
+  margin: 10px 0 15px 10px;
+  font-size: 12px;
+}
+
+.producto .rating .star-filled {
+  color: orange;
+}
+
+.producto .rating .star-empty {
+  color: #ccc;  
+}
+.producto .rating .reviews-line{
+  color: rgba(0,0,0,.6);
+  margin-left: 5px;
+}
+.producto .rating .reviews-link:hover{
+  color: black;
+}
+.producto figure {
+  flex: 0 0 50%;   
+  min-width: 0;    
+}
+.producto figure img{
+  width:100%;
+  height:200px;
+  object-fit: cover;
+}
+.producto-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.galeria-producto{
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap:10px;
+ }
+.galeria-producto img{
+  flex: 0 0 50%;
+  width:50%;
+  height:150px;
+  object-fit: contain;
+  scroll-snap-align: start;
+}
+/* --- Contenedor de la descripción --- */
+.descripcion-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%; /* 👈 Ocupa todo el ancho de la tarjeta */
+  margin-top: 0; /* Ya no necesita margin-top:auto porque está en columna */
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+/* --- Estilo de la etiqueta (Badge) --- */
+.etiqueta {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+/* --- Estilo del texto --- */
+.info-producto {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #555;
+  line-height: 1.4;
+  width: 100%;
+  word-wrap: break-word;
+}
+/* ========================================
+   BADGE FLIP-FLOP
+   ======================================== */
+
+.badge {
+  width: 100%;
+  height: 32px;
+  perspective: 1000px;
+  margin-top: 5px;
+}
+
+/* Elemento que realmente gira */
+.badge-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+
+  transition: transform 0.7s ease;
+}
+
+/* Cuando JavaScript agrega esta clase,
+   el badge gira 180 grados */
+.badge.flipped .badge-inner {
+  transform: rotateX(180deg);
+}
+
+/* Las dos caras */
+.badge-front,
+.badge-back {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Cara del descuento */
+.badge-front {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+/* Cara de las ventas */
+.badge-back {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+
+  transform: rotateX(180deg);
+}
