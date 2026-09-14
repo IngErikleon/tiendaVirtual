@@ -68,7 +68,7 @@ body {
   align-items: center;
   gap: 15px;
   /* IMPORTANTE: Quitamos los estilos que rompían la barra */
-  background-color: white; 
+  background-color: transparent; 
   padding: 0;
   border-radius: 0;
   box-shadow: none;
