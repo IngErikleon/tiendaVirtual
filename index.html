@@ -9,145 +9,125 @@
     <title>Mi Tienda</title>
   </head>
   <body>
-    <header>
-    
+ <header>
     <section id="header" class="header">
-  <div class="header-top">
-    <div class="container">
-      <div class="row header-flex-row">
-        
-        <!-- ===== IZQUIERDA: LOGO ===== -->
-        <div class="col-logo">
-          <div class="logo-container">
-             <!-- Ícono SVG: Carrito de Supermercado -->
-        <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <!-- Ruedas del carrito -->
-            <circle cx="9" cy="20" r="1.5"/>
-            <circle cx="18" cy="20" r="1.5"/>
-            <!-- Cuerpo del carrito y manija -->
-            <path d="M1 2h3l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-        </svg>
-            <div class="logo-text">
-                <div class="brand-name">
-                    <span>V</span>ariedades Nova<span class="brand-dot">.</span>
+        <!-- ===== HEADER TOP (BARRA ROJA SUPERIOR) ===== -->
+        <div class="header-top">
+            <div class="container">
+                <div class="row header-flex-row">
+                    
+                    <!-- IZQUIERDA: LOGO -->
+                    <div class="col-logo">
+                        <div class="logo-container">
+                            <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9" cy="20" r="1.5"/>
+                                <circle cx="18" cy="20" r="1.5"/>
+                                <path d="M1 2h3l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                            </svg>
+                            <div class="logo-text">
+                                <div class="brand-name">
+                                    <span>V</span>ariedades Nova<span class="brand-dot">.</span>
+                                </div>
+                                <div class="brand-tagline">
+                                    Todo lo que buscas, en un solo lugar
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CENTRO: BUSCADOR Y CÓDIGO POSTAL -->
+                    <div class="col-search">
+                        <div class="search-bar-container">
+                            <div class="postal-code">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Introduce un Código Postal</span>
+                            </div>
+                            <div class="search-divider"></div>
+                            <div class="search-box">
+                                <input type="text" placeholder="¿Qué es lo que buscas?">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DERECHA: LOGIN Y ACCIONES -->
+                    <div class="col-actions">
+                        <ul class="flat-unstyled header-actions">
+                            <li class="action-item">
+                                <a href="#">
+                                    <i class="fas fa-user"></i>
+                                    <span>Registrate</span>
+                                </a>
+                            </li>
+                            <li class="action-item">
+                                <a href="#">
+                                    <i class="fas fa-box"></i>
+                                    <span>Mis Pedidos</span>
+                                </a>
+                            </li>
+                            <li class="action-item">
+                                <a href="#">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                            </li>
+                            <li class="action-item cart-item">
+                                <a href="#">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span class="cart-badge">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="brand-tagline">
-                    Todo lo que buscas, en un solo lugar
-                </div>
             </div>
-          </div>
         </div>
 
-        <!-- ===== CENTRO: BUSCADOR Y CÓDIGO POSTAL ===== -->
-        <div class="col-search">
-          <div class="search-bar-container">
-            <!-- Código Postal -->
-            <div class="postal-code">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Introduce un Código Postal</span>
+        <!-- ===== NAV (BARRA DE NAVEGACIÓN INFERIOR) ===== -->
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li>
+                        <a href="#" onclick="toggleSubMenu(this)">Producto</a>
+                        <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+                            <svg viewBox="0 0 256 512"><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="#">Herramientas</a></li>
+                            <li><a href="#">Cables</a></li>
+                            <li><a href="#">Tubos</a></li>
+                            <li><a href="#">Madera</a></li>
+                            <li><a href="#">Electrico</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" onclick="toggleSubMenu(this)">Servicios</a>
+                        <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+                            <svg viewBox="0 0 256 512"><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="#">Logistico</a></li>
+                            <li><a href="#">Pruebas</a></li>
+                            <li><a href="#">Estrategicos</a></li>
+                            <li><a href="#">Acompañamientos</a></li>
+                            <li><a href="#">Fletes</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" onclick="toggleSubMenu(this)">Ayuda</a>
+                        <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+                            <svg viewBox="0 0 256 512"><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="#">Contacto</a></li>
+                            <li><a href="#">Emergencia</a></li>
+                            <li><a href="#">Quienes Somos</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            
-            <!-- Separador -->
-            <div class="search-divider"></div>
-
-            <!-- Buscador -->
-            <div class="search-box">
-              <input type="text" placeholder="¿Qué es lo que buscas?">
-              <button type="submit"><i class="fas fa-search"></i></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- ===== DERECHA: LOGIN Y ACCIONES ===== -->
-        <div class="col-actions">
-          <ul class="flat-unstyled header-actions">
-            <!-- Registrate -->
-            <li class="action-item">
-              <a href="#">
-                <i class="fas fa-user"></i>
-                <span>Registrate</span>
-              </a>
-            </li>
-            
-            <!-- Mis Pedidos -->
-            <li class="action-item">
-              <a href="#">
-                <i class="fas fa-box"></i>
-                <span>Mis Pedidos</span>
-              </a>
-            </li>
-            
-            <!-- Favoritos (Corazón) -->
-            <li class="action-item">
-              <a href="#">
-                <i class="fas fa-heart"></i>
-              </a>
-            </li>
-            
-            <!-- Carrito -->
-            <li class="action-item cart-item">
-              <a href="#">
-                <i class="fas fa-shopping-bag"></i>
-                <span class="cart-badge">0</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-      <nav>
-        <ul>
-          <li>
-            <a href="#" onclick="toggleSubMenu(this)">Producto</a>
-            <button onclick="toggleSubMenu(this)" class="dropdown-btn">
-              <svg viewBox="0 0 256 512" title="angle-left">
-                <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
-              </svg>
-            </button>
-            <ul class="submenu">
-              <li><a href="#">Herramientas</a></li>
-              <li><a href="#">Cables</a></li>
-              <li><a href="#">Tubos</a></li>
-              <li><a href="#">Madera</a></li>
-              <li><a href="#">Electrico</a></li>
-            </ul>
-          </li>
-
-          <li>
-            <a href="#" onclick="toggleSubMenu(this)">Servicios</a>
-            <button onclick="toggleSubMenu(this)" class="dropdown-btn">
-              <svg viewBox="0 0 256 512" title="angle-left">
-                <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
-              </svg>
-            </button>
-            <ul class="submenu">
-              <li><a href="#">Logistico</a></li>
-              <li><a href="#">Pruebas</a></li>
-              <li><a href="#">Estrategicos</a></li>
-              <li><a href="#">Acompañamientos</a></li>
-              <li><a href="#">Fletes</a></li>
-            </ul>
-          </li>
-
-          <li>
-            <a href="#" onclick="toggleSubMenu(this)">Ayuda</a>
-            <button onclick="toggleSubMenu(this)" class="dropdown-btn">
-              <svg viewBox="0 0 256 512" title="angle-left">
-                <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
-              </svg>
-            </button>
-            <ul class="submenu">
-              <li><a href="#">Contacto</a></li>
-              <li><a href="#">Emergencia</a></li>
-              <li><a href="#">Quienes Somos</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header></hr>
+        </nav>
+    </section>
+</header> </hr>
 
     <main>
 
