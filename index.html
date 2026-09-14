@@ -13,56 +13,84 @@
     <section id="header" class="header">
   <div class="header-top">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <ul class="flat-support">
-            <li><a href="#">Soporte</a></li>
-            <li><a href="#">Localiza</a></li>
-            <li><a href="#">Orden</a></li>
+      <div class="row header-flex-row">
+        
+        <!-- ===== IZQUIERDA: LOGO ===== -->
+        <div class="col-logo">
+          <div class="logo-container">
+            <!-- Ícono SVG: Carrito de Supermercado -->
+            <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="20" r="1.5"/>
+                <circle cx="18" cy="20" r="1.5"/>
+                <path d="M1 2h3l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+            <div class="logo-text">
+                <div class="brand-name">
+                    <span>V</span>ariedades Nova<span class="brand-dot">.</span>
+                </div>
+                <div class="brand-tagline">
+                    Todo lo que buscas, en un solo lugar
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== CENTRO: BUSCADOR Y CÓDIGO POSTAL ===== -->
+        <div class="col-search">
+          <div class="search-bar-container">
+            <!-- Código Postal -->
+            <div class="postal-code">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Introduce un Código Postal</span>
+            </div>
+            
+            <!-- Separador -->
+            <div class="search-divider"></div>
+
+            <!-- Buscador -->
+            <div class="search-box">
+              <input type="text" placeholder="¿Qué es lo que buscas?">
+              <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== DERECHA: LOGIN Y ACCIONES ===== -->
+        <div class="col-actions">
+          <ul class="flat-unstyled header-actions">
+            <!-- Registrate -->
+            <li class="action-item">
+              <a href="#">
+                <i class="fas fa-user"></i>
+                <span>Registrate</span>
+              </a>
+            </li>
+            
+            <!-- Mis Pedidos -->
+            <li class="action-item">
+              <a href="#">
+                <i class="fas fa-box"></i>
+                <span>Mis Pedidos</span>
+              </a>
+            </li>
+            
+            <!-- Favoritos (Corazón) -->
+            <li class="action-item">
+              <a href="#">
+                <i class="fas fa-heart"></i>
+              </a>
+            </li>
+            
+            <!-- Carrito -->
+            <li class="action-item cart-item">
+              <a href="#">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-badge">0</span>
+              </a>
+            </li>
           </ul>
         </div>
 
-        <!-- Centro -->
-        <div class="col-md-4">
-          <ul class="flat-infomation">
-            <li class="phone">
-              Llamanos: <a href="tel:+919012983208">(+961) 123456789</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Derecha -->
-        <div class="col-md-4">
-          <ul class="flat-unstyled">
-            <li class="account">
-              <a href="#"><i class="fas fa-user" ></i> <i class="fa fa-angle-down"></i></a>
-              <ul class="unstyled">
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Wishlist</a></li>
-                <li><a href="#">My Cart</a></li>
-                <li><a href="#">My Account</a></li>
-                <li><a href="#">Checkout</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">USD <i class="fa fa-angle-down"></i></a>
-              <ul class="unstyled">
-                <li><a href="#">Euro</a></li>
-                <li><a href="#">Dolar</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">English <i class="fa fa-angle-down"></i></a>
-              <ul class="unstyled">
-                <li><a href="#">Turkish</a></li>
-                <li><a href="#">English</a></li>
-                <li><a href="#">اللغة العربية</a></li>
-                <li><a href="#">Español</a></li>
-                <li><a href="#">Italiano</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
