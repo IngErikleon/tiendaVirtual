@@ -302,6 +302,68 @@ body {
   }
 }
 
+/* TEXTO DEL LOGO  */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-align: left;
+}
+
+.logo-brand {
+  font-size: 1.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f5e6c8 0%, #dbb86a 50%, #b88a3a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.5px;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
+  transition: all 0.2s;
+}
+
+.logo-brand-sub {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f5e6c8 0%, #dbb86a 50%, #b88a3a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.5px;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
+  margin-top: -3px;
+  transition: all 0.2s;
+}
+
+.logo-slogan {
+  font-size: 0.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 2px;
+  background: linear-gradient(145deg, #dbb86a, #8a743c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.85;
+  transition: all 0.2s;
+}
+
+.logo:hover .logo-brand,
+.logo:hover .logo-brand-sub {
+  background: linear-gradient(135deg, #ffffff 0%, #e8c87a 60%, #c99a3a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.logo:hover .logo-slogan {
+  letter-spacing: 2.5px;
+  opacity: 1;
+}
+
+
+
+
 
 nav {
   position: static;
