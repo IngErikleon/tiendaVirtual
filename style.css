@@ -26,24 +26,25 @@ body {
   padding-top: 60px;
 }
 
-
-/* ====== RESET Y CONTENEDOR PRINCIPAL ====== */
+/* ==========================================================
+   RESET Y CONTENEDOR PRINCIPAL DEL HEADER
+   ========================================================== */
 .header-top {
   background-color: #E30613; /* Rojo Sanborns */
-  height: 80px; /* Altura un poco mayor para que quepa el logo */
-  font-size: 12px;
-  position: relative;
+  height: 80px;
   width: 100%;
+  position: relative;
   z-index: 1000;
   font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
 }
 
 .header-top .container {
   width: 100%;
-  max-width: 1400px; /* Un poco más ancho para que quepa todo */
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 15px;
-  height: 100%;
+  padding: 0 20px;
 }
 
 /* Fila flexible para alinear los 3 bloques */
@@ -51,30 +52,39 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
+  width: 100%;
   gap: 20px;
 }
 
-/* ====== IZQUIERDA: LOGO ====== */
+/* ==========================================================
+   IZQUIERDA: LOGO (CORREGIDO)
+   ========================================================== */
 .col-logo {
   flex-shrink: 0;
 }
 
-/* Ajustamos el logo para que no tenga fondo blanco y se adapte al header */
 .logo-container {
   display: flex;
   align-items: center;
   gap: 12px;
-  background-color: transparent; /* Quitamos el fondo blanco */
+  /* IMPORTANTE: Quitamos los estilos que rompían la barra */
+  background-color: transparent; 
   padding: 0;
   border-radius: 0;
   box-shadow: none;
+  /* Corrección para el SVG */
+  height: 100%;
 }
 
 .logo-icon {
   width: 40px;
   height: 40px;
-  fill: #ffffff; /* Icono blanco para contrastar con el rojo */
+  /* IMPORTANTE: Corregido para que el SVG no se vea como un borrón negro */
+  fill: #ffffff; 
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .logo-text {
@@ -87,7 +97,7 @@ body {
   font-family: 'Georgia', serif; 
   font-size: 28px;
   font-weight: bold;
-  color: #ffffff; /* Texto blanco */
+  color: #ffffff;
   line-height: 1;
   letter-spacing: -0.5px;
 }
@@ -105,7 +115,7 @@ body {
   font-family: 'Arial', sans-serif;
   font-size: 9px;
   font-weight: 600;
-  color: #ffcccc; /* Un blanco un poco más suave */
+  color: #ffcccc;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-top: 2px;
@@ -118,26 +128,27 @@ body {
   margin-left: 2px;
 }
 
-/* ====== CENTRO: BUSCADOR ====== */
+/* ==========================================================
+   CENTRO: BUSCADOR
+   ========================================================== */
 .col-search {
-  flex-grow: 1; /* Ocupa todo el espacio disponible */
+  flex-grow: 1;
   display: flex;
   justify-content: center;
+  max-width: 650px; /* Evita que el buscador sea demasiado ancho */
 }
 
 .search-bar-container {
   display: flex;
   align-items: center;
   background-color: #ffffff;
-  border-radius: 25px; /* Bordes muy redondeados */
+  border-radius: 25px;
   padding: 5px 20px;
   width: 100%;
-  max-width: 600px; /* Ancho máximo del buscador */
   height: 45px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Código Postal */
 .postal-code {
   display: flex;
   align-items: center;
@@ -153,7 +164,6 @@ body {
   font-size: 14px;
 }
 
-/* Separador vertical */
 .search-divider {
   width: 1px;
   height: 25px;
@@ -161,7 +171,6 @@ body {
   margin: 0 15px;
 }
 
-/* Caja de búsqueda */
 .search-box {
   display: flex;
   align-items: center;
@@ -191,7 +200,9 @@ body {
   padding: 0 5px;
 }
 
-/* ====== DERECHA: ACCIONES ====== */
+/* ==========================================================
+   DERECHA: ACCIONES
+   ========================================================== */
 .col-actions {
   flex-shrink: 0;
 }
@@ -199,7 +210,7 @@ body {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 20px; /* Espacio entre cada icono */
+  gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -226,7 +237,6 @@ body {
   font-size: 16px;
 }
 
-/* Estilo específico para el Carrito */
 .cart-item a {
   position: relative;
 }
@@ -247,7 +257,9 @@ body {
   justify-content: center;
 }
 
-/* ====== RESPONSIVE (Para que no se rompa en pantallas pequeñas) ====== */
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
 @media (max-width: 1024px) {
   .header-flex-row {
     flex-wrap: wrap;
@@ -256,7 +268,7 @@ body {
     gap: 10px;
   }
   .col-search {
-    order: 3; /* El buscador baja a la siguiente línea */
+    order: 3;
     width: 100%;
     max-width: 100%;
   }
@@ -274,7 +286,7 @@ body {
 
 @media (max-width: 600px) {
   .action-item span {
-    display: none; /* Ocultamos el texto en móviles muy pequeños */
+    display: none;
   }
   .action-item a {
     gap: 0;
@@ -283,12 +295,14 @@ body {
     gap: 15px;
   }
   .postal-code span {
-    display: none; /* Ocultamos el texto del código postal */
+    display: none;
   }
   .search-divider {
     display: none;
   }
 }
+
+
 
 /* ====== CONTENEDOR DEL LOGO ====== */
 .logo {
