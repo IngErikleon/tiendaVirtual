@@ -26,174 +26,268 @@ body {
   padding-top: 60px;
 }
 
-/* ============================================
-   HEADER TOP 
-   ============================================ */
 
+/* ====== RESET Y CONTENEDOR PRINCIPAL ====== */
 .header-top {
-  background-color: #f5f5f5;
-  border-bottom: 1px solid #e5e5e5;
-  height: 30px;
-  font-size: 10px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-color: #E30613; /* Rojo Sanborns */
+  height: 80px; /* Altura un poco mayor para que quepa el logo */
+  font-size: 12px;
+  position: relative;
   width: 100%;
   z-index: 1000;
+  font-family: 'Arial', sans-serif;
 }
 
 .header-top .container {
-  width: 1170px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1400px; /* Un poco más ancho para que quepa todo */
   margin: 0 auto;
   padding: 0 15px;
+  height: 100%;
 }
 
-.header-top .row {
+/* Fila flexible para alinear los 3 bloques */
+.header-flex-row {
   display: flex;
   align-items: center;
-  height: 30px;
+  justify-content: space-between;
+  height: 100%;
+  gap: 20px;
 }
 
-.header-top .col-md-4 {
-  width: 33.333%;
-  padding: 0 15px;
+/* ====== IZQUIERDA: LOGO ====== */
+.col-logo {
+  flex-shrink: 0;
 }
 
-/* ===== Izquierda: flat-support ===== */
-ul.flat-support {
-  list-style: none;
-  margin: 0;
+/* Ajustamos el logo para que no tenga fondo blanco y se adapte al header */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: transparent; /* Quitamos el fondo blanco */
   padding: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-ul.flat-support li {
-  display: inline-block;
-  line-height: 30px;
-  height: 37px;
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  fill: #ffffff; /* Icono blanco para contrastar con el rojo */
 }
 
-ul.flat-support li a {
-  display: inline-block;
-  padding: 0 10px 0 7px;
-  border-right: 1px solid #e5e5e5;
-  font-size: 10px;
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s;
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-ul.flat-support li:first-child a {
-  padding-left: 0;
-}
-
-ul.flat-support li:last-child a {
-  border-right: none;
-  padding-right: 0;
-}
-
-ul.flat-support li a:hover {
-  color: #f28b00;
-}
-
-/* ===== Centro: flat-infomation ===== */
-ul.flat-infomation {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-ul.flat-infomation li.phone {
-  line-height: 30px;
-  height: 37px;
-  color: #f28b00;
+.brand-name {
+  font-family: 'Georgia', serif; 
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff; /* Texto blanco */
+  line-height: 1;
   letter-spacing: -0.5px;
 }
 
-ul.flat-infomation li.phone a {
-  color: #f28b00;
-  text-decoration: none;
-  font-weight: 500;
+.brand-name span {
+  font-family: 'Brush Script MT', 'Dancing Script', cursive;
+  font-size: 34px;
+  font-weight: normal;
+  margin-right: 2px;
+  position: relative;
+  top: 2px;
 }
 
-ul.flat-infomation li.phone a:hover {
-  text-decoration: underline;
+.brand-tagline {
+  font-family: 'Arial', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  color: #ffcccc; /* Un blanco un poco más suave */
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 2px;
 }
 
-/* ===== Derecha: flat-unstyled + dropdowns ===== */
-ul.flat-unstyled {
+.brand-dot {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1;
+  margin-left: 2px;
+}
+
+/* ====== CENTRO: BUSCADOR ====== */
+.col-search {
+  flex-grow: 1; /* Ocupa todo el espacio disponible */
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 25px; /* Bordes muy redondeados */
+  padding: 5px 20px;
+  width: 100%;
+  max-width: 600px; /* Ancho máximo del buscador */
+  height: 45px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Código Postal */
+.postal-code {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.postal-code i {
+  color: #E30613;
+  font-size: 14px;
+}
+
+/* Separador vertical */
+.search-divider {
+  width: 1px;
+  height: 25px;
+  background-color: #ddd;
+  margin: 0 15px;
+}
+
+/* Caja de búsqueda */
+.search-box {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  color: #333;
+  background: transparent;
+}
+
+.search-box input::placeholder {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #E30613;
+  font-size: 16px;
+  padding: 0 5px;
+}
+
+/* ====== DERECHA: ACCIONES ====== */
+.col-actions {
+  flex-shrink: 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espacio entre cada icono */
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: right;
 }
 
-ul.flat-unstyled > li {
-  display: inline-block;
-  line-height: 30px;
-  height: 37px;
+.action-item a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  transition: opacity 0.3s;
   position: relative;
 }
 
-ul.flat-unstyled > li > a {
-  display: inline-block;
-  padding: 0 9px 0 6px;
-  border-left: 1px solid #e5e5e5;
-  font-size: 10px;
-  color: #333;
-  text-decoration: none;
-  letter-spacing: -0.5px;
+.action-item a:hover {
+  opacity: 0.8;
+  color: #ffffff;
 }
 
-ul.flat-unstyled > li:first-child > a {
-  border-left: none;
+.action-item i {
+  font-size: 16px;
 }
 
-ul.flat-unstyled > li > a i {
-  margin-left: 6px;
-  font-size: 11px;
+/* Estilo específico para el Carrito */
+.cart-item a {
+  position: relative;
 }
 
-ul.flat-unstyled > li > a:hover {
-  color: #f28b00;
-}
-
-/* Dropdown */
-ul.flat-unstyled > li > ul.unstyled {
+.cart-badge {
   position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 130px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  padding: 8px 0;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.25s ease;
-  z-index: 99;
-  text-align: left;
+  top: -8px;
+  right: -10px;
+  background-color: #ffffff;
+  color: #E30613;
+  font-size: 9px;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-ul.flat-unstyled > li:hover > ul.unstyled {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+/* ====== RESPONSIVE (Para que no se rompa en pantallas pequeñas) ====== */
+@media (max-width: 1024px) {
+  .header-flex-row {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 0;
+    gap: 10px;
+  }
+  .col-search {
+    order: 3; /* El buscador baja a la siguiente línea */
+    width: 100%;
+    max-width: 100%;
+  }
+  .search-bar-container {
+    max-width: 100%;
+  }
+  .col-logo, .col-actions {
+    flex-grow: 1;
+  }
+  .header-top {
+    height: auto;
+    min-height: 80px;
+  }
 }
 
-ul.flat-unstyled > li > ul.unstyled li a {
-  display: block;
-  padding: 6px 16px;
-  font-size: 10px;
-  color: #484848;
-  text-decoration: none;
-}
-
-ul.flat-unstyled > li > ul.unstyled li a:hover {
-  color: #f28b00;
-  background-color: #f9f9f9;
+@media (max-width: 600px) {
+  .action-item span {
+    display: none; /* Ocultamos el texto en móviles muy pequeños */
+  }
+  .action-item a {
+    gap: 0;
+  }
+  .header-actions {
+    gap: 15px;
+  }
+  .postal-code span {
+    display: none; /* Ocultamos el texto del código postal */
+  }
+  .search-divider {
+    display: none;
+  }
 }
 
 /* ====== CONTENEDOR DEL LOGO ====== */
