@@ -66,9 +66,9 @@ body {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
   /* IMPORTANTE: Quitamos los estilos que rompían la barra */
-  background-color: transparent; 
+  background-color: white; 
   padding: 0;
   border-radius: 0;
   box-shadow: none;
