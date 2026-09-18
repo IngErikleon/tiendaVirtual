@@ -29,9 +29,12 @@ body {
 /* ==========================================================
    HEADER TOP (BARRA ROJA) - ESTILO SANBORNS
    ========================================================== */
+/* ==========================================================
+   HEADER TOP (FONDO ROJO)
+   ========================================================== */
 .header-top {
     background-color: #E30613;
-    height: 72px;
+    height: 80px; /* Aumenté ligeramente la altura para dar espacio a la píldora */
     width: 100%;
     position: relative;
     z-index: 1000;
@@ -46,6 +49,20 @@ body {
     padding: 0 20px;
 }
 
+/* ==========================================================
+   NUEVO CONTENEDOR CON BORDER-RADIUS: 50px (LA PÍLDORA BLANCA)
+   ========================================================== */
+.header-pill {
+    background-color: #ffffff;
+    border-radius: 50px;       /* <--- El radio que pediste */
+    padding: 8px 24px;         /* Espacio interno para que no pegue a los bordes */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave para resaltar */
+    min-height: 56px;          /* Altura mínima para que se vea la píldora */
+}
+
 .header-flex-row {
     display: flex;
     align-items: center;
@@ -54,7 +71,56 @@ body {
     gap: 20px;
 }
 
-/* --- Logo --- */
+/* --- Ajustes de color dentro de la píldora blanca --- */
+.header-pill .logo-icon {
+    fill: #E30613;    /* Rojo de la marca */
+    stroke: #E30613;
+}
+
+.header-pill .brand-name {
+    color: #E30613;   /* Texto rojo */
+}
+
+.header-pill .brand-name span {
+    color: #E30613;
+}
+
+.header-pill .brand-dot {
+    color: #E30613;
+}
+
+.header-pill .brand-tagline {
+    color: #666666;   /* Gris para el eslogan */
+}
+
+.header-pill .action-item a {
+    color: #333333;   /* Texto oscuro para que se lea sobre blanco */
+}
+
+.header-pill .action-item a:hover {
+    color: #E30613;
+}
+
+.header-pill .action-item i {
+    color: #E30613;   /* Iconos en rojo */
+}
+
+.header-pill .cart-badge {
+    background-color: #E30613;
+    color: #ffffff;
+}
+
+/* --- Ajuste del buscador dentro de la píldora --- */
+.header-pill .search-bar-container {
+    background-color: #f5f5f5; /* Gris muy claro para el buscador */
+    border-radius: 22px;       /* Mantenemos el radio original del buscador */
+    box-shadow: none;          /* Quitamos la sombra doble */
+    border: 1px solid #e0e0e0; /* Borde sutil */
+}
+
+/* ==========================================================
+   ESTILOS ORIGINALES DEL LOGO
+   ========================================================== */
 .col-logo {
     flex-shrink: 0;
 }
@@ -69,8 +135,6 @@ body {
 .logo-icon {
     width: 38px;
     height: 38px;
-    fill: #ffffff;
-    stroke: #ffffff;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -84,16 +148,15 @@ body {
 
 .brand-name {
     font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
-    color: #ffffff;
     line-height: 1;
     letter-spacing: -0.5px;
 }
 
 .brand-name span {
     font-family: 'Brush Script MT', 'Dancing Script', cursive;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: normal;
     margin-right: 2px;
     position: relative;
@@ -103,19 +166,19 @@ body {
 .brand-tagline {
     font-size: 9px;
     font-weight: 600;
-    color: #ffcccc;
     letter-spacing: 1.4px;
     text-transform: uppercase;
     margin-top: 3px;
 }
 
 .brand-dot {
-    color: #ffffff;
     font-size: 14px;
     margin-left: 2px;
 }
 
-/* --- Buscador --- */
+/* ==========================================================
+   BUSCADOR (ESTILOS BASE)
+   ========================================================== */
 .col-search {
     flex-grow: 1;
     display: flex;
@@ -126,12 +189,9 @@ body {
 .search-bar-container {
     display: flex;
     align-items: center;
-    background-color: #ffffff;
-    border-radius: 22px;
     padding: 0 18px;
     width: 100%;
     height: 42px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 .postal-code {
@@ -143,6 +203,8 @@ body {
     font-weight: 600;
     white-space: nowrap;
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .postal-code i {
@@ -188,7 +250,9 @@ body {
     align-items: center;
 }
 
-/* --- Acciones Derecha --- */
+/* ==========================================================
+   ACCIONES DE USUARIO (DERECHA)
+   ========================================================== */
 .col-actions {
     flex-shrink: 0;
 }
@@ -206,11 +270,10 @@ body {
     display: flex;
     align-items: center;
     gap: 6px;
-    color: #ffffff;
     text-decoration: none;
     font-size: 11px;
     font-weight: 600;
-    transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease, color 0.25s ease;
     position: relative;
 }
 
@@ -230,8 +293,6 @@ body {
     position: absolute;
     top: -8px;
     right: -11px;
-    background-color: #ffffff;
-    color: #E30613;
     font-size: 9px;
     font-weight: bold;
     width: 16px;
@@ -244,7 +305,7 @@ body {
 }
 
 /* ==========================================================
-   NAV (BARRA DE NAVEGACIÓN) - ESTILO SANBORNS
+   NAV (BARRA DE NAVEGACIÓN)
    ========================================================== */
 .main-nav {
     background-color: #ffffff;
@@ -364,10 +425,13 @@ li.activo > .submenu {
    RESPONSIVE
    ========================================================== */
 @media (max-width: 1024px) {
+    .header-pill {
+        padding: 12px 20px; /* Más espacio vertical en tablets */
+    }
+
     .header-flex-row {
         flex-wrap: wrap;
         height: auto;
-        padding: 12px 0;
         gap: 12px;
     }
 
@@ -388,7 +452,8 @@ li.activo > .submenu {
 
     .header-top {
         height: auto;
-        min-height: 72px;
+        min-height: 80px;
+        padding: 10px 0; /* Un poco de padding al contenedor rojo */
     }
 
     .nav-list {
@@ -404,6 +469,11 @@ li.activo > .submenu {
 }
 
 @media (max-width: 600px) {
+    .header-pill {
+        border-radius: 30px; /* Reducimos el radio en móviles para que no se vea exagerado */
+        padding: 10px 15px;
+    }
+
     .action-item span {
         display: none;
     }
@@ -444,7 +514,6 @@ li.activo > .submenu {
         font-size: 8px;
     }
 }
-
 
 
 
