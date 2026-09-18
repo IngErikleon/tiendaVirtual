@@ -9,11 +9,12 @@
     <title>Mi Tienda</title>
   </head>
   <body>
-<header>
-   <section id="header" class="header">
-        <!--HEADER TOP-->
-        <div class="header-top">
-            <div class="container">
+<header id="header" class="header">
+    <!--HEADER TOP-->
+    <div class="header-top">
+        <div class="container">
+            <!-- NUEVO CONTENEDOR CON EL BORDER-RADIUS: 50px -->
+            <div class="header-pill">
                 <div class="row header-flex-row">
                     <!-- LOGO -->
                     <div class="col-logo">
@@ -36,169 +37,119 @@
                             </div>
                         </a>
                     </div>
+
                     <!-- BUSCADOR + CÓDIGO POSTAL-->
                     <div class="col-search">
                         <div class="search-bar-container">
                             <!-- Código postal -->
-                            <button type="button" class="postal-code"  aria-label="Seleccionar código postal">
-                                 <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                                <span>
-                                    Introduce un Código Postal
-                                </span>
+                            <button type="button" class="postal-code" aria-label="Seleccionar código postal">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <span>Introduce un Código Postal</span>
                             </button>
                             <!-- Separador -->
-                            <div class="search-divider"  aria-hidden="true">
-                            </div>
+                            <div class="search-divider" aria-hidden="true"></div>
                             <!-- Buscador -->
                             <form class="search-box" role="search">
-                                <label for="search-input" class="visually-hidden">
-                                    Buscar productos
-                                </label>
-                                <input id="search-input"  type="search"  name="q" placeholder="¿Qué es lo que buscas?">
-                               <button type="submit" aria-label="Buscar">
+                                <label for="search-input" class="visually-hidden">Buscar productos</label>
+                                <input id="search-input" type="search" name="q" placeholder="¿Qué es lo que buscas?">
+                                <button type="submit" aria-label="Buscar">
                                     <i class="fas fa-search" aria-hidden="true"></i>
                                 </button>
-                           </form>
+                            </form>
                         </div>
                     </div>
-                   <!-- ACCIONES DE USUARIO -->
+
+                    <!-- ACCIONES DE USUARIO -->
                     <div class="col-actions">
                         <ul class="flat-unstyled header-actions">
                             <!-- Registro -->
                             <li class="action-item">
                                 <a href="/registro">
-                                    <i class="fas fa-user"
-                                       aria-hidden="true"></i>
-                                    <span>
-                                        Regístrate
-                                    </span>
+                                    <i class="fas fa-user" aria-hidden="true"></i>
+                                    <span>Regístrate</span>
                                 </a>
                             </li>
                             <!-- Mis pedidos -->
                             <li class="action-item">
                                 <a href="/mis-pedidos">
-                                    <i class="fas fa-box"
-                                       aria-hidden="true"></i>
-                                    <span>
-                                        Mis Pedidos
-                                    </span>
+                                    <i class="fas fa-box" aria-hidden="true"></i>
+                                    <span>Mis Pedidos</span>
                                 </a>
                             </li>
                             <!-- Favoritos -->
                             <li class="action-item">
-                                <a href="/favoritos"
-                                   aria-label="Lista de deseos">
-                                    <i class="fas fa-heart"
-                                       aria-hidden="true"></i>
-                               </a>
+                                <a href="/favoritos" aria-label="Lista de deseos">
+                                    <i class="fas fa-heart" aria-hidden="true"></i>
+                                </a>
                             </li>
                             <!-- Carrito -->
                             <li class="action-item cart-item">
-                                <a href="/carrito"
-                                   aria-label="Carrito de compras, 0 productos">
-                                    <i class="fas fa-shopping-bag"
-                                       aria-hidden="true"></i>
-                                    <span class="cart-badge"
-                                          aria-hidden="true">
-                                        0
-                                    </span>
+                                <a href="/carrito" aria-label="Carrito de compras, 0 productos">
+                                    <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+                                    <span class="cart-badge" aria-hidden="true">0</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
+            <!-- FIN NUEVO CONTENEDOR -->
         </div>
-        <!-- NAV -->
-        <nav class="main-nav" aria-label="Navegación principal">
-            <div class="container">
-                <ul class="nav-list">
-                    <!-- PRODUCTO -->
-                    <li>
-                        <a href="#"  onclick="toggleSubMenu(this)">
-                            Producto
-                        </a>
-                        <button type="button"
-                                onclick="toggleSubMenu(this)"
-                                class="dropdown-btn"
-                                aria-label="Abrir menú Producto">
-                            <svg viewBox="0 0 256 512"
-                                 aria-hidden="true">
-                                <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/>
-                            </svg>
-                        </button>
-                        <ul class="submenu">
-                            <li>
-                                <a href="#">Herramientas</a>
-                            </li>
-                            <li>
-                                <a href="#">Cables</a>
-                            </li>
-                            <li>
-                                <a href="#">Tubos</a>
-                            </li>
-                            <li>
-                                <a href="#">Madera</a>
-                            </li>
-                            <li>
-                                <a href="#">Eléctrico</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- SERVICIOS -->
-                    <li>
-                        <a href="#" onclick="toggleSubMenu(this)">
-                            Servicios
-                        </a>
-                        <button type="button" onclick="toggleSubMenu(this)" class="dropdown-btn"  aria-label="Abrir menú Servicios">
-                            <svg viewBox="0 0 256 512"
-                                 aria-hidden="true">
-                                <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 24.6 9.4 33.9 0L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/>
-                            </svg>
-                        </button>
-                        <ul class="submenu">
-                            <li>
-                                <a href="#">Logístico</a>
-                            </li>
-                            <li>
-                                <a href="#">Pruebas</a>
-                            </li>
-                            <li>
-                                <a href="#">Estratégicos</a>
-                            </li>
-                            <li>
-                                <a href="#">Acompañamientos</a>
-                            </li>
-                            <li>
-                                <a href="#">Fletes</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!--AYUDA -->
-                    <li><a href="#"   onclick="toggleSubMenu(this)">
-                            Ayuda
-                        </a>
-                        <button type="button" onclick="toggleSubMenu(this)" class="dropdown-btn" aria-label="Abrir menú Ayuda">
-                            <svg viewBox="0 0 256 512" aria-hidden="true">
-                                <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 24.6 9.4 33.9 0L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/>
-                            </svg>
-                        </button>
-                        <ul class="submenu">
-                            <li>
-                                <a href="#">Contacto</a>
-                            </li>
-                            <li>
-                                <a href="#">Emergencia</a>
-                            </li>
-                            <li>
-                                <a href="#">Quiénes Somos</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </section>
+    </div>
+
+    <!-- NAV -->
+    <nav class="main-nav" aria-label="Navegación principal">
+        <div class="container">
+            <ul class="nav-list">
+                <!-- PRODUCTO -->
+                <li>
+                    <a href="#" onclick="toggleSubMenu(this)">Producto</a>
+                    <button type="button" onclick="toggleSubMenu(this)" class="dropdown-btn" aria-label="Abrir menú Producto">
+                        <svg viewBox="0 0 256 512" aria-hidden="true">
+                            <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/>
+                        </svg>
+                    </button>
+                    <ul class="submenu">
+                        <li><a href="#">Herramientas</a></li>
+                        <li><a href="#">Cables</a></li>
+                        <li><a href="#">Tubos</a></li>
+                        <li><a href="#">Madera</a></li>
+                        <li><a href="#">Eléctrico</a></li>
+                    </ul>
+                </li>
+                <!-- SERVICIOS -->
+                <li>
+                    <a href="#" onclick="toggleSubMenu(this)">Servicios</a>
+                    <button type="button" onclick="toggleSubMenu(this)" class="dropdown-btn" aria-label="Abrir menú Servicios">
+                        <svg viewBox="0 0 256 512" aria-hidden="true">
+                            <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 24.6 9.4 33.9 0L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/>
+                        </svg>
+                    </button>
+                    <ul class="submenu">
+                        <li><a href="#">Logístico</a></li>
+                        <li><a href="#">Pruebas</a></li>
+                        <li><a href="#">Estratégicos</a></li>
+                        <li><a href="#">Acompañamientos</a></li>
+                        <li><a href="#">Fletes</a></li>
+                    </ul>
+                </li>
+                <!-- AYUDA -->
+                <li>
+                    <a href="#" onclick="toggleSubMenu(this)">Ayuda</a>
+                    <button type="button" onclick="toggleSubMenu(this)" class="dropdown-btn" aria-label="Abrir menú Ayuda">
+                        <svg viewBox="0 0 256 512" aria-hidden="true">
+                            <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 24.6 9.4 33.9 0L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/>
+                        </svg>
+                    </button>
+                    <ul class="submenu">
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Emergencia</a></li>
+                        <li><a href="#">Quiénes Somos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </header> </hr>
     <main>
 
